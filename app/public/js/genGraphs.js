@@ -28,8 +28,8 @@
               splitData.push([i, 0, flu_data.death[i]]);
           }
 
-          $('#sofar').html(soFar);
-          $('#left').html(left);
+          $('.death .sofar').html(soFar);
+          $('.death .left').html(left);
           
           var data = new google.visualization.DataTable();
           //google.visualization.arrayToDataTable(splitData);
