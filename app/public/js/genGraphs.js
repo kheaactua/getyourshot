@@ -28,6 +28,9 @@
               splitData.push([i, 0, flu_data.death[i]]);
           }
 
+          $('#sofar').html(soFar);
+          $('#left').html(left);
+          
           var data = new google.visualization.DataTable();
           //google.visualization.arrayToDataTable(splitData);
           data.addColumn('number', 'Week');
@@ -41,7 +44,25 @@
               backgroundColor: 'transparent',
               title: 'Average reported deaths in Canada from influenza in 2010 & 2011 by this week',
               hAxis: {
-                  ticks: [{v: 3, f: 'September'},{v: 12, f: 'November'},{v: 20, f: 'January'},{v: 29, f: 'March'},{v: 38, f: 'May'},{v: 46, f: 'July'}]
+                  ticks: [{
+                      v: 3,
+                      f: 'September'
+                  }, {
+                      v: 12,
+                      f: 'November'
+                  }, {
+                      v: 20,
+                      f: 'January'
+                  }, {
+                      v: 29,
+                      f: 'March'
+                  }, {
+                      v: 38,
+                      f: 'May'
+                  }, {
+                      v: 46,
+                      f: 'July'
+                  }]
               },
               vAxis: {
                   minValue: 0
@@ -51,11 +72,11 @@
               },
               colors: ['orange', 'red']
           };
-            /*
+          /*
           var dataView = new google.visualization.DataView(data);
           dataView.setColumns([{calc: function(data, row) { return ''; }, type:'string'}, 2, 1,0]);
           */
-          var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+          var chart = new google.visualization.AreaChart(document.getElementById('chart_div_deaths'));
           chart.draw(data, options);
       }
 
