@@ -23,7 +23,8 @@ function drawChart() {
 		splitData.push([flu_data.month[i],flu_data.death[i],0]);
 		i++;
 	}
-	for (var i;i<52;i++) {
+	//Keep incrementing "i" with the next graph
+	for (;i<52;i++) {
 		left += flu_data.death[i];
 		splitData.push([flu_data.month[i],0,flu_data.death[i]]);
 	}
