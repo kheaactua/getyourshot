@@ -12,6 +12,7 @@
     <!-- endbower -->
     <!-- endbuild -->
     <!-- build:css(.tmp) styles/main.css -->
+    <link rel="stylesheet" href="bower_components/flipclock/compiled/flipclock.css">
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
   </head>
@@ -22,49 +23,55 @@
 
 
     <div class="container">
+		<div class="row vertical-center-row">
+			<div class="col-lg-12">
 
-		<div id="countdown" class="jumbotron">
-			<h1>Countdown to flu</h1>
-			<div>11 days!</div>
-		</div>
+				<div id="countdown" class="jumbotron">
+					<img src="images/virus.svg" alt="" id="logo-virus" />
+					<h1>Countdown to flu</h1>
+					<div class="clock"></div>
+				</div>
 
-		<div id="stats">
-			<p>At this time last year, there were:</p>
-			<div class="stat row">
-				<h4>Deaths:</h4>
-				<p class="hindcast">180 infinities</p>
-				<p class="forecast">1</p>
-				<img src="images/chart_ex.png" alt="Deaths" />
+				<div id="stats">
+					<p>At this time last year, there were:</p>
+					<div class="stat row">
+						<h4>Deaths:</h4>
+						<p class="hindcast">180 infinities</p>
+						<p class="forecast">1</p>
+						<img src="images/chart_ex.png" alt="Deaths" class="col-lg-12" />
+					</div>
+					<div class="stat row">
+						<h4>Hospitalizations:</h4>
+						<p class="hindcast">120</p>
+						<p class="forecast">1</p>
+						<img src="images/chart_ex.png" alt="Deaths" class="col-lg-12" />
+					</div>
+					<div class="stat autism row">
+						<p>Cases of autism constracted by flu shot:</p>
+						<p class="hindcast">0</p>
+						<p class="forecast">0</p>
+						<aside>Statistic includes males and females of all races from ages 0-65+</aside>
+					</div>
+				</div>
+
+				<div id="find-clinic" class="row">
+					<button class="btn-primary">Get my shot!</button>
+				</div>
+
+
+			  <div class="footer">
+					<!-- Put something here -->
+			  </div>
+
 			</div>
-			<div class="stat row">
-				<h4>Hospitalizations:</h4>
-				<p class="hindcast">120</p>
-				<p class="forecast">1</p>
-				<img src="images/chart_ex.png" alt="Deaths" />
-			</div>
-			<div class="stat autism row">
-				<p>Cases of autism constracted by flu shot:</p>
-				<p class="hindcast">0</p>
-				<p class="forecast">0</p>
-				<aside>Statistic includes males and females of all races from ages 0-65+</aside>
-			</div>
 		</div>
-
-		<div id="find-clinic" class="row">
-			<button class="btn-primary">Get my shot!</button>
-		</div>
-
-
-      <div class="footer">
-			<!-- Put something here -->
-      </div>
-
     </div>
 
 
     <!-- build:js(.) scripts/vendor.js -->
     <!-- bower:js -->
     <script src="bower_components/jquery/dist/jquery.js"></script>
+    <script src="bower_components/flipclock/compiled/flipclock.js"></script>
     <!-- endbower -->
     <!-- endbuild -->
 

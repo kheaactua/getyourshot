@@ -2,6 +2,7 @@
   "name": "getyourshot",
   "private": true,
   "dependencies": {
-    "bootstrap-sass-official": "~3.3.3"
+    "bootstrap-sass-official": "~3.3.3",
+    "flipclock": "~0.7.7"
   }
 }
