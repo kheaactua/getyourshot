@@ -16,7 +16,32 @@
     <link rel="stylesheet" href="styles/main.css">
     <!-- endbuild -->
     
-    <script>
+    
+  </head>
+  <body>
+    <!--[if lt IE 10]>
+      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
+    <![endif]-->
+
+
+    <div class="container">
+		<div class="row vertical-center-row">
+			<div class="col-lg-12">
+
+				<div id="countdown" class="jumbotron">
+					<img src="images/virus.svg" alt="" id="logo-virus" />
+					<h1>Countdown to flu</h1>
+					<div class="clock"></div>
+				</div>
+
+				<div id="stats">
+					<p>At this time last year, there were:</p>
+					
+					
+					<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>
+       					<div id="chart_div" style="width: 900px; height: 500px;"></div>
+					
+					    <script>
     	     google.setOnLoadCallback(drawChart);
       function drawChart() {
         var flu_data = [];
@@ -67,30 +92,6 @@
 	    return Math.min(Math.floor(getCurrentDay()/7)+1,52);
 	}
     </script>
-    
-  </head>
-  <body>
-    <!--[if lt IE 10]>
-      <p class="browsehappy">You are using an <strong>outdated</strong> browser. Please <a href="http://browsehappy.com/">upgrade your browser</a> to improve your experience.</p>
-    <![endif]-->
-
-
-    <div class="container">
-		<div class="row vertical-center-row">
-			<div class="col-lg-12">
-
-				<div id="countdown" class="jumbotron">
-					<img src="images/virus.svg" alt="" id="logo-virus" />
-					<h1>Countdown to flu</h1>
-					<div class="clock"></div>
-				</div>
-
-				<div id="stats">
-					<p>At this time last year, there were:</p>
-					
-					
-					<script type="text/javascript" src="https://www.google.com/jsapi?autoload={'modules':[{'name':'visualization','version':'1.1','packages':['corechart']}]}"></script>
-       					<div id="chart_div" style="width: 900px; height: 500px;"></div>
 					
 					<div class="stat autism row">
 						<p>Cases of autism constracted by flu shot:</p>
