@@ -7,6 +7,8 @@
 @import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
 // endbower
 
-.graph {
-	background-color: red;
+.stat {
+	.hindcast, .forecast {
+		display:none;
+	}
 }
