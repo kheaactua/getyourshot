@@ -37,7 +37,7 @@ function drawChart() {
   data.addRows(splitData);
 
   var options = {
-	  width: 400,
+	
 	  height: 240,
 	  title: 'Reported deaths in Canada from influenza in 2010-2011 by this week',
 	  hAxis: {
