@@ -198,8 +198,10 @@ module.exports = function (grunt) {
       },
       sass: {
         src: ['<%= config.app %>/styles/{,*/}*.{scss,sass}'],
-        //ignorePath: /(\.\.\/){1,2}bower_components\//
-        ignorePath: [/(\.\.\/){1,2}bower_components\//, /bower_components/]
+		ignorePath: /(\.\.\/){1,2}bower_components\//
+		//ignorePath: /..\/..\/bower_components\//
+		//ignorePath: '<%= config.app %>/bower_components/'
+		//ignorePath: /(\.\.\/){1,2}bower_components\/.*/
       }
     },
 
