@@ -55,7 +55,7 @@ function drawChart() {
   var dataView = new google.visualization.DataView(data);
   dataView.setColumns([{calc: function(data, row) { return ''; }, type:'string'}, 2, 1,0]);
   */
-  var chart = new google.visualization.AreaChart(document.getElementById('chart_div'));
+  var chart = new google.visualization.AreaChart(document.getElementById('chart_div-deaths'));
   chart.draw(data, options);
 }
 
