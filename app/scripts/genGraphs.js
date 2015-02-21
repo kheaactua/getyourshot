@@ -37,6 +37,8 @@ function drawChart() {
   data.addRows(splitData);
 
   var options = {
+	  width: 400,
+	  height: 240,
 	  title: 'Reported deaths in Canada from influenza in 2010-2011 by this week',
 	  hAxis: {
 		  ticks: [{v: 3, f: 'September'},{v: 12, f: 'November'},{v: 20, f: 'January'},{v: 29, f: 'March'},{v: 38, f: 'May'},{v: 46, f: 'July'}]
@@ -47,7 +49,7 @@ function drawChart() {
 	  legend: {
 		  position: 'none'
 	  },
-	  colors: ['yellow', 'red']
+	  colors: ['orange', 'red']
   };
 	/*
   var dataView = new google.visualization.DataView(data);
