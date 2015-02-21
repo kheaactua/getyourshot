@@ -1,0 +1,12 @@
+// All bootstrap stuff were moved to
+// vendor, this way we can process that file differently.
+
+
+/*@import "_variables.scss";*/
+// bower:scss
+@import "bootstrap-sass-official/assets/stylesheets/_bootstrap.scss";
+// endbower
+
+.graph {
+	background-color: red;
+}
