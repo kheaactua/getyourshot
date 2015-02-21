@@ -1,0 +1,85 @@
+@import "variables";
+@import "bootstrap";
+@import "compass/css3";
+@import "compass/css3/border-radius";
+
+@import "_flipclock";
+
+
+.stat {
+	.hindcast, .forecast {
+		display:none;
+	}
+}
+
+#logo-virus {
+	width: 100px;
+	position: relative;
+	left: 80%;
+	top:5%;
+}
+
+/* Center horizontally and vertically */
+html, body {
+	height: 100%;
+	background-color: #ccc;
+}
+.container {
+	padding:6%;
+	background-color: white;
+	display: table;
+	vertical-align: middle;
+}
+.vertical-center-row {
+	display: table-cell;
+	vertical-align: middle;
+}
+/* /Center horizontally and vertically */
+
+.mybox {
+	@include border-radius(2px 5px, 3px 6px);
+	background-color:#9a9a9a;
+	margin-bottom: 10px;
+}
+
+#countdown {
+	h1 {
+		text-align:center;
+		margin:0 autp;
+	}
+}
+
+/* Flipclock */
+.clock {
+	position: relative !important;
+	padding-top: 0px;
+	margin-left: -194px;
+
+	height:100px;
+	width: 470px;
+
+	/*zoom: .6;*/ 
+	transform: scale(.54);
+	-ms-transform: scale(.54); /* IE 9 /
+	-webkit-transform: scale(.54); / Safari and Chrome /
+	-o-transform: scale(.54); / Opera /
+	-moz-transform: scale(.54); / Firefox */
+}
+
+.flip-clock-wrapper {
+	/* ... In the flipclock.css file I think you may need to have this on... */
+	position: relative; 
+	margin:0 auto;
+}
+/* /Flipclock */
+
+/* Center charts */
+#chart_div {
+	/* Will replace this with bootstrap col's */
+/*
+	width:900px;
+*/
+	height:500px;
+}
+
+/* Center charts */
