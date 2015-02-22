@@ -2,7 +2,7 @@
 <html class="no-js">
   <head>
     <meta charset="utf-8">
-    <title>getyourshot</title>
+    <title>Get Your Shot</title>
     <meta name="description" content="">
     <meta name="viewport" content="width=device-width">
     <link rel="shortcut icon" href="/favicon.ico">
@@ -19,7 +19,7 @@
     <![endif]-->
 
 
-    <div class="container">
+    <div class="container col-xs-12">
 		<div class="row vertical-center-row">
 			<div class="col-xs-12">
 
@@ -39,31 +39,42 @@
 
 				<div id="stats" class="mybox row col-xs-10 col-xs-offset-1">
 					<div class="col-xs-12">
-						<h2>At this time last year, there were</h2>
+						<h2>At this time last year, there were,</h2>
 						
 						<h3 class="big">Deaths</h3>
 						
-							<div class="chart_div-container death">
-								<div id="chart_div-deaths"></div>
-								<div class="hindcast"><span class="number-stat"></span> deaths</div>
-								<div class="forecast"><span class="number-stat"></span> more deaths</div>
-							</div>
+						<div class="chart_div-container death">
+							<div id="chart_div-deaths"></div>
+							<div class="hindcast"><span class="number-stat"></span> deaths</div>
+							<div class="forecast"><span class="number-stat"></span> more deaths</div>
+
+							<p class="source">Source: <a href="http://data.gc.ca">Open Government</a> <a href="http://open.canada.ca/data/en/dataset/178f04f7-5a3a-40ad-991f-25be84b4868c">FluWatch 2012-2013</a></p>
+						</div>
 
 						<h3 class="big">Hospitalizations</h3>
 						<div class="chart_div-container">
 							<div id="chart_div-hospital"></div>
+							<p class="source">Source: <a href="http://data.gc.ca">Open Government</a> <a href="http://open.canada.ca/data/en/dataset/178f04f7-5a3a-40ad-991f-25be84b4868c">FluWatch 2012-2013</a></p>
 						</div>
+
+					</div><!-- /col-xs-12 -->
+				</div><!-- /stats -->
+
+				<div id="autism" class="autism stat mybox row col-xs-10 col-xs-offset-1">
+					<div class="col-xs-12">
 						
-						<div id="autism" class="stat autism row">
-							<h2>Cases of autism contracted by flu shot:</h2>
-							<div class="row col-xs-offset-2">
-								<div class="hindcast col-xs-4">Historical: <span class="number-stat">0</span></div>
-								<div class="forecast col-xs-4">Projected: <span class="number-stat">0</span></div>
+						<h3 class="big">Contracted Autism</h3>
+						<div class="statbox col-xs-12">
+							<div class="row">
+								<div class="hindcast"><strong>Historical:</strong> <span class="number-stat">0</span></div>
+								<div class="forecast"><strong>Projected:</strong> <span class="number-stat">0</span></div>
 							</div>
-							<aside>Statistic includes males and females of all races from ages 0-65+ through ever.</aside>
+							<p class="source">Autism statistic includes males and females of all races from ages 0-65+ through ever.</p>
 						</div>
-					</div>
-				</div>
+
+					</div><!-- /col-xs-12 -->
+				</div><!-- /mybox -->
+
 
 
 
@@ -72,9 +83,9 @@
 					<!-- Put something here -->
 			  </div>
 
-			</div>
-		</div>
-    </div>
+			</div><!-- /col-xs-12 -->
+		</div><!-- /row -->
+    </div><!-- /container -->
 
     <!-- Google Analytics: change UA-XXXXX-X to be your site's ID. -->
     <script>
