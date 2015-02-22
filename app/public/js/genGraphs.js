@@ -121,10 +121,11 @@
           var splitData_hospital = [];
 
           var i = 0,
-              soFar = 0,
-              left = 0;
+              hindcast = [0,0],
+              forcast = [0,0];
           while (flu_data.week[i] != thisWeek) {
-              soFar += flu_data.death[i][2];
+              hindcast[0] += flu_data.death[i][2];
+              hindcast[1] += flu_data.hospital[i][2];
               splitData_deaths.push([i, flu_data.death[i][0], flu_data.death[i][1], flu_data.death[i][2], NaN, NaN, NaN]);
               splitData_hospital.push([i, flu_data.hospital[i][0], flu_data.hospital[i][1], flu_data.hospital[i][2], NaN, NaN, NaN]);
               i++;
@@ -134,13 +135,16 @@
 
           //Keep incrementing "i" with second graph for futur deaths
           for (; i < 52; i++) {
-              left += flu_data.death[i][2];
+              forcast[0] += flu_data.death[i][2];
+              forcast[1] += flu_data.hospital[i][2];
               splitData_deaths.push([i, NaN, NaN, NaN, flu_data.death[i][0], flu_data.death[i][1], flu_data.death[i][2]]);
               splitData_hospital.push([i, NaN, NaN, NaN, flu_data.hospital[i][0], flu_data.hospital[i][1], flu_data.hospital[i][2]]);
           }
 
-          $('.death .hindcast .number-stat').html(soFar);
-          $('.death .forecast .number-stat').html(left);
+          $('.death .hindcast .number-stat').html(hindcast[0]);
+          $('.hospital .hindcast .number-stat').html(hindcast[1]);
+          $('.death .forecast .number-stat').html(forcast[0]);
+          $('.hospital .forecast .number-stat').html(forcast[1]);
 
           //Create dataTable for Deaths
           var data = new google.visualization.DataTable();
@@ -153,6 +157,45 @@
           data.addColumn('number', 'Total');
 
           data.addRows(splitData_deaths);
+          
+          var options = {
+              height: 400,
+              backgroundColor: 'transparent',
+              title: 'By today: Deaths in Canada from influenza in 2012-2013',
+              titleTextStyle: {
+                  fontSize: 16,
+                  bold: true
+              },
+              hAxis: {
+                  ticks: [{
+                      v: 3,
+                      f: 'September'
+                  }, {
+                      v: 12,
+                      f: 'November'
+                  }, {
+                      v: 20,
+                      f: 'January'
+                  }, {
+                      v: 29,
+                      f: 'March'
+                  }, {
+                      v: 38,
+                      f: 'May'
+                  }, {
+                      v: 46,
+                      f: 'July'
+                  }]
+              },
+              vAxis: {
+                  minValue: 0
+              },
+              legend: {
+                  position: 'none'
+              },
+              colors: ['yellow', 'orange', 'red', 'blue', 'purple', 'green']
+          };
+
 
           //Create dataTable for Hospital
           var data2 = new google.visualization.DataTable();
@@ -166,10 +209,10 @@
 
           data2.addRows(splitData_hospital);
 
-          var options = {
+          var options2 = {
               height: 400,
               backgroundColor: 'transparent',
-              title: 'Deaths in Canada from influenza in 2012-2013 by today',
+              title: 'By today: Hospitalizations in Canada from influenza in 2012-2013',
               titleTextStyle: {
                   fontSize: 16,
                   bold: true
@@ -209,7 +252,7 @@
 
           chart.draw(data, options);
           var chart2 = new google.visualization.AreaChart(document.getElementById('chart_div-hospital'));
-          chart2.draw(data2, options);
+          chart2.draw(data2, options2);
       }
 
       function getCurrentDay() {
