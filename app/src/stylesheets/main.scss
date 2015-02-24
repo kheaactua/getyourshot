@@ -27,10 +27,14 @@ html, body {
 	background-color: $darkgrey;
 }
 .container {
-	padding: 2% 3% 2% 3%;
 	background-color: $darkgrey;
 	display: table;
 	vertical-align: middle;
+}
+@media (min-width: 768px) {
+	.container {
+		padding: 2% 3% 2% 3%;
+	}
 }
 .vertical-center-row {
 	display: table-cell;
